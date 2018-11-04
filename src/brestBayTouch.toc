@@ -1,0 +1,50 @@
+\select@language {french}
+\contentsline {chapter}{\numberline {1}Le Projet Brest Bay Touch}{11}{chapter.1}
+\contentsline {section}{\numberline {1.1}Objet du document}{11}{section.1.1}
+\contentsline {section}{\numberline {1.2}L'\'equipe}{11}{section.1.2}
+\contentsline {section}{\numberline {1.3}Objectif du projet}{11}{section.1.3}
+\contentsline {section}{\numberline {1.4}Bases du projet}{11}{section.1.4}
+\contentsline {section}{\numberline {1.5}Suivi de projet}{12}{section.1.5}
+\contentsline {section}{\numberline {1.6}Diff\'erents types de cartes imprimables}{12}{section.1.6}
+\contentsline {subsection}{\numberline {1.6.1}Mod\`ele num\'erique de terrain + cartographie marine}{12}{subsection.1.6.1}
+\contentsline {subsection}{\numberline {1.6.2}Mod\`ele num\'erique de terrain de la bathym\'etrie}{13}{subsection.1.6.2}
+\contentsline {subsection}{\numberline {1.6.3}Mod\`ele num\'erique de terrain altim\'etrique + mod\`ele num\'erique de terrain bathym\'etrique}{14}{subsection.1.6.3}
+\contentsline {subsection}{\numberline {1.6.4}Mod\`ele num\'erique de terrain altim\'etrique + isobathym\'etriques}{14}{subsection.1.6.4}
+\contentsline {subsection}{\numberline {1.6.5}Mod\`ele num\'erique de terrain + cartographie marine + bathym\'etrie}{16}{subsection.1.6.5}
+\contentsline {section}{\numberline {1.7}Tests}{17}{section.1.7}
+\contentsline {chapter}{\numberline {2}Les contraintes}{19}{chapter.2}
+\contentsline {section}{\numberline {2.1}Contraintes technologiques}{19}{section.2.1}
+\contentsline {subsection}{\numberline {2.1.1}Le tuilage}{19}{subsection.2.1.1}
+\contentsline {section}{\numberline {2.2}Contraintes g\'eod\'esiques}{19}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}Syst\`emes de coordonn\'ees}{19}{subsection.2.2.1}
+\contentsline {section}{\numberline {2.3}Contraintes s\'emiologique}{20}{section.2.3}
+\contentsline {chapter}{\numberline {3}Les sources de donn\'ees}{21}{chapter.3}
+\contentsline {section}{\numberline {3.1}Altim\'etrie}{21}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}Sources}{21}{subsection.3.1.1}
+\contentsline {subsection}{\numberline {3.1.2}Mise en \oe uvre}{22}{subsection.3.1.2}
+\contentsline {subsection}{\numberline {3.1.3}Etendue spatiale}{23}{subsection.3.1.3}
+\contentsline {section}{\numberline {3.2}Bathym\'etrie}{24}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Sources}{24}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}Etendue spatiale}{25}{subsection.3.2.2}
+\contentsline {subsection}{\numberline {3.2.3}Mise en \oe uvre}{26}{subsection.3.2.3}
+\contentsline {section}{\numberline {3.3}Cartographie}{26}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}Sources}{26}{subsection.3.3.1}
+\contentsline {subsection}{\numberline {3.3.2}Etendue spatiale}{28}{subsection.3.3.2}
+\contentsline {subsection}{\numberline {3.3.3}Mise en \oe uvre}{28}{subsection.3.3.3}
+\contentsline {section}{\numberline {3.4}Objets 3D g\'eor\'ef\'erenc\'es}{28}{section.3.4}
+\contentsline {subsection}{\numberline {3.4.1}Sources}{28}{subsection.3.4.1}
+\contentsline {subsection}{\numberline {3.4.2}Mise en \oe uvre}{28}{subsection.3.4.2}
+\contentsline {chapter}{\numberline {4}L'export des donn\'ees}{29}{chapter.4}
+\contentsline {section}{\numberline {4.1}Export STL}{29}{section.4.1}
+\contentsline {section}{\numberline {4.2}Export 3MF}{30}{section.4.2}
+\contentsline {section}{\numberline {4.3}Export KML}{30}{section.4.3}
+\contentsline {section}{\numberline {4.4}Export GeoTiff}{31}{section.4.4}
+\contentsline {section}{\numberline {4.5}Export ASC}{31}{section.4.5}
+\contentsline {section}{\numberline {4.6}Export Shapefile}{31}{section.4.6}
+\contentsline {chapter}{\numberline {5}Utilisation du logiciel}{33}{chapter.5}
+\contentsline {section}{\numberline {5.1}Interface utilisateur}{34}{section.5.1}
+\contentsline {chapter}{\numberline {6}Les publications}{41}{chapter.6}
+\contentsline {chapter}{\numberline {7}Les r\'esultats}{43}{chapter.7}
+\contentsline {chapter}{\numberline {8}Les futurs travaux}{45}{chapter.8}
+\contentsline {section}{\numberline {8.1}Exploration des d\'etails de bathym\'etrie}{45}{section.8.1}
+\contentsline {section}{\numberline {8.2}Int\'egration des donn\'ees Open Street Building}{45}{section.8.2}

@@ -1,0 +1,418 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Le Projet Brest Bay Touch}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Objet du document}
+Ce document fourni les informations techniques de développement informatique associé au projet \bbt \ : aide à la navigation maritime pour les non voyants. Ce développement s'appuie sur le projet \nav \ précédemment développé par l'équipe de Terre Virtuelle.
+\section{L'équipe}
+\begin{itemize}
+	\item Les associations \href{http://orion-brest.com/}{ORION}  et \href{https://www.unadev.com/}{UNADEV}  propose les spécifications, assure le management du projet, propose et exécute les tests, assure l'impression des cartes.
+	\item les membres de ces associations  exécutent les tests et participent au co-développement.
+	\item l'UNADEV diffuse cette technologie.
+	\item L'association Terre Virtuelle assure le développement informatique, permettant à partir des données maritimes et terrestres, la génération des fichiers STL, propres aux imprimantes 3D.
+\end{itemize}
+\section{Objectif du projet}
+Afin de présenter des informations maritimes et terrestrestres aux personnes malvoyantes ou non voyantes, nous développons une chaîne de production, open source et libre, d'impression de cartes en 3D.
+\section{Bases du projet}
+Ce projet  : {\bf Brest Bay Touch (BBT)} s'appuie sur un des  projets plus ancien de {\bf Terre Virtuelle} : {\bf NaVisu} qui est un framework de développement d'applications géoréférencées.
+Il est lui même construit sur une API (Application Programming Interface) développée par la NASA : WorldWind Java : \href{https://goworldwind.org/}{https://goworldwind.org/}
+\section{Suivi de projet}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{center}
+	\framebox[1\width]{
+		\includegraphics[width=14cm]{images/suiviProjet/kanban-300x240.png}
+	}
+	\begin{figure}[ht]
+		\caption{\label{x3dRadeBrest}\textit{Un extrait du panneau KANBAN du projet}}
+	\end{figure}
+\end{center}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Différents types de cartes imprimables}
+A partir d'une interface l'utilisateur peut choisir différentes configurations de données à visualiser.
+\subsection{Modèle numérique de terrain + cartographie marine}
+La partie terrestre est réalisée à partir des données de l'IGN ou d'une autre source de telle que GeoTopo30 ou SRTM. La mer est une surface plane et un ensemble d'informations maritimes est extrait des cartes produites par le SHOM. 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{center}
+	\framebox[1\width]{
+		\includegraphics[width=14cm]{images/stl/x3dRade.png}
+	}
+	\begin{figure}[ht]
+		\caption{\label{x3dRadeBrest}\textit{Rade de Brest }}
+	\end{figure}
+\end{center}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Modèle numérique de terrain de la  bathymétrie}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{center}
+	\framebox[1\width]{
+		\includegraphics[width=14cm]{images/bathy/bathy_11.png}
+	}
+	\begin{figure}[ht]
+		\caption{\label{MNTbathy}\textit{MNT bathymétrique }}
+	\end{figure}
+\end{center}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Afin d'offrir une connaissance des focnds marins, les données bathymétriques araissent sous forme d'un modèle numérique de terrain. Le relief est alors plan.
+\subsection{Modèle numérique de terrain altimétrique + modèle numérique de terrain bathymétrique}
+Afin de donner une vision des fonds marins, dans cette configuration, pour la france,  on représente les données bathymétrique du SHOM sous forme d'un modèle numérique de terrain. Les données altimétriques proviennent de l'IGN ou du SRTM, on procède alors à la fucion des données.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{center}
+	\framebox[1\width]{
+		\includegraphics[width=14cm]{images/stl/mntAlti.png}
+	}
+	\begin{figure}[ht]
+		\caption{\label{mntAlti}\textit{Les modèles numériques de terrain altimétrique et bathymétrique issus des données IGN et SHOM}}
+	\end{figure}
+\end{center}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Modèle numérique de terrain altimétrique + isobathymétriques}
+Les isobathes sont issues de la cartographie vectorielle du SHOM ou de la NOAA.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{center}
+	\framebox[1\width]{
+		\includegraphics[width=14cm]{images/bathy/depare_4-300x240.png}
+	}
+	\begin{figure}[ht]
+		\caption{\label{mntAlti}\textit{Les modèles numériques de terrain altimétrique et DepthArea de la cartographie du SHOM}}
+	\end{figure}
+\end{center}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{center}
+	\framebox[1\width]{
+		\includegraphics[width=14cm]{images/bathy/depareDBSimple3D-300x240.png}
+	}
+	\begin{figure}[ht]
+		\caption{\label{mntAlti}\textit{Les modèles numériques de terrain altimétrique et DepthArea de la cartographie du SHOM}}
+	\end{figure}
+\end{center}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Modèle numérique de terrain + cartographie marine + bathymétrie}
+Ici aussi la bathymétrie est représentée sous forme "d'escaliers" correspondant aux isobathes des cartes marines. Il est aussi possible de rajouter les information maritimes : bouées, phares, \ldots
+\section{Tests}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{center}
+	\framebox[1\width]{
+		\includegraphics[width=14cm]{images/tests/all-300x300.jpg}
+	}
+	\begin{figure}[ht]
+		\caption{\label{mntAlti}\textit{Recherche de la bonne représentation du balisage : planche générale}}
+	\end{figure}
+\end{center}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{center}
+	\framebox[1\width]{
+		\includegraphics[width=14cm]{images/tests/lines34567-300x225.jpg}
+	}
+	\begin{figure}[ht]
+		\caption{\label{mntAlti}\textit{Recherche de la bonne représentation du balisage}}
+	\end{figure}
+\end{center}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{center}
+	\framebox[1\width]{
+		\includegraphics[width=14cm]{images/tests/lines2_3mm_et_1_4mmet5mm-300x122.jpg}
+	}
+	\begin{figure}[ht]
+		\caption{\label{mntAlti}\textit{Recherche de la bonne représentation du balisage}}
+	\end{figure}
+\end{center}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Les contraintes}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Contraintes technologiques}
+
+\subsection{Le tuilage}
+Les imprimantes 3D dont dispose l'utilisateur peuvent ne pas correspondre aux dimensions que l'on souhaite avoir pour les cartes. Dans ce cas nous proposons un tuilage, qui consiste à découper la zone définie en une série de petites zones. Les cartes imprimées seront ensuite reliées par aimantation. A l'heure actuelle, à cause des contraintes sur les imprimantes ces tuiles sont carrées.
+\section{Contraintes géodésiques}
+\subsection{Systèmes de coordonnées}
+Les données maritimes mondiales sont généralement fournies dans le référentiel WGS 84 (EPSG:4326), en France les dnnées altimétriques distribuées par l'IGN ou les données LIDAR de la cote sont dans le référentiel REF 93 avec la projection  Lambert93. Pour effectuer la fusionn des données il convient de procéder au changement de projection.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{center}
+	\framebox[1\width]{
+		\includegraphics[width=16cm]{images/dem/ign1.png}
+	}
+	\begin{figure}[ht]
+		\caption{\label{bathyDB}\textit{Représentation hypsométrique du relief métropolitain}}
+	\end{figure}
+\end{center}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Contraintes sémiologique}
+C'est l'objet de notre partenaire l'association Orion.
+Il s'agit d'maginer et reconstruire un ensemble de symboles cartographiques pour les non voyants
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Les sources de données}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Altimétrie}
+\subsection{Sources}
+\begin{itemize}
+\item Space Shuttle Radar Topography Mission (SRTM)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{center}
+	\framebox[1\width]{
+		\includegraphics[width=16cm]{images/dem/srtm.jpg}
+	}
+	\begin{figure}[ht]
+		\caption{\label{ignDB}\textit{Space Shuttle Radar Topography Mission (SRTM)}}
+	\end{figure}
+\end{center}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\item L'IGN
+\\
+Actuellement (2018)  l'IGN :
+\href{http://professionnels.ign.fr/bdalti}{BD ALTI}, fichiers : {\tt BDALTIV2\_75M\_FXX\_xxxx\_xxxx\_MNT\_LAMB93\_IGN69.asc}, fourni gracieusement des données altimétriques tous les 75m. Nous pouvons utiliser ces données à partir de nos bases de données, mais nous préférons les données du SRTM, tous les 30m, depuis 2014. Le travail effectué pour décodage des données de l'IGN, ainsi que la reprojection vers le système EPSG : 4326, nous sera utile pour l'utilisation des données LIDAR.
+\subsection{Mise en \oe uvre}
+La distribution des données de l'IGN, vient sous forme d'une collection de fichiers au format .asc. Chaque fichier représente 75Km$²$ sur la terre, à raison d'un point tous les 75m, ils sont donc relativement volumineux. 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{center}
+	\framebox[1\width]{
+		\includegraphics[width=16cm]{images/utilisation/altiDB.png}
+	}
+	\begin{figure}[ht]
+		\caption{\label{ignDB}\textit{Chargement des données dans la base BD ALTI}}
+	\end{figure}
+\end{center}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Etendue spatiale}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{center}
+	\framebox[1\width]{
+		\includegraphics[width=16cm]{images/dem/ign.png}
+	}
+	\begin{figure}[ht]
+		\caption{\label{ignDB}\textit{Etendue du projet BD ALTI}}
+	\end{figure}
+\end{center}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{itemize}
+\section{Bathymétrie}
+\subsection{Sources}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{center}
+	\framebox[1\width]{
+		\includegraphics[width=16cm]{images/utilisation/bathyDB.png}
+	}
+	\begin{figure}[ht]
+		\caption{\label{ignDB}\textit{Chargement des données dans la base BD BATHY}}
+	\end{figure}
+\end{center}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Etendue spatiale}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{center}
+	\framebox[1\width]{
+		\includegraphics[width=16cm]{images/bathy/homonim_0.png}
+	}
+	\begin{figure}[ht]
+		\caption{\label{bathyDB}\textit{Etendue du projet Homonim PBMA}}
+	\end{figure}
+\end{center}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{center}
+	\framebox[1\width]{
+		\includegraphics[width=15cm]{images/bathy/homonim.png}
+	}
+	\begin{figure}[ht]
+		\caption{\label{bathyDB}\textit{MNT bathymétrique de la façade Atlantique à une résolution de 0.001°(~111m)}}
+	\end{figure}
+	
+\end{center}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Mise en \oe uvre}
+
+\section{Cartographie}
+\subsection{Sources}
+SHOM
+NOAA
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{center}
+	\framebox[1\width]{
+		\includegraphics[width=16cm]{images/utilisation/s57DB.png}
+	}
+	\begin{figure}[ht]
+		\caption{\label{ignDB}\textit{Chargement des données dans une des bases cartographiques S57}}
+	\end{figure}
+\end{center}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Etendue spatiale}
+\subsection{Mise en \oe uvre}
+
+
+
+\section{Objets 3D géoréférencés}
+\subsection{Sources}
+\subsection{Mise en \oe uvre}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{center}
+	\framebox[1\width]{
+		\includegraphics[width=14cm]{images/dae/nySTL.png}
+	}
+	\begin{figure}[ht]
+		\caption{\label{MNTbathy}\textit{Entrée de new York City }}
+	\end{figure}
+\end{center}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{L'export des données}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Export STL}
+Le format STL (Standard Tessellation Language), initialement développé par {\bf 3D Systems}, est extrèmement simple. Un fichier STL décrit les surfaces de mailles telles des caractéristiques géométriques. Un solide est composé de faces triangulaires, qui sont elles-mêmes composées d'une normale et de 3 sommets décrits par leurs coordonnées. 
+\begin{center}
+\begin{minipage}{12cm}
+\begin{verbatim}
+solid
+  facet normal 0.0 -0.9882392306514677 0.15291573823970914 
+    outer loop 
+      vertex 137.95979903830215 138.60046315913647 4.0 
+      vertex 137.57078026018425 136.08637518871737 4.807470290632069 
+      vertex 137.95979903830215 138.60046315913647 4.807470290632069 
+    endloop 
+  endfacet 
+  facet normal 0.0 -0.9882392306514677 0.15291573823970914 
+    outer loop 
+      vertex 137.95979903830215 138.60046315913647 4.0 
+      vertex 137.57078026018425 136.08637518871737 4.0 
+      vertex 137.57078026018425 136.08637518871737 4.807470290632069 
+    endloop 
+    endfacet 
+end solid
+\end{verbatim}
+\end{minipage}
+\end{center}
+Ce format a l'avantage d'être accepté par la plupart des imprimantes, mais oblige le concepteur à faire de nombreux calculs. De plus la couleur n'est nativement pas supportée.
+\section{Export 3MF}
+\section{Export KML}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{center}
+	\framebox[1\width]{
+		\includegraphics[width=15cm]{images/export/bathyshomaltiign-300x125.png}
+	}
+	\begin{figure}[ht]
+		\caption{\label{kml}\textit{Export des données en KML, visualisation sur Google Earth}}
+	\end{figure}
+\end{center}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{center}
+	\framebox[1\width]{
+		\includegraphics[width=15cm]{images/stl/kml.png}
+	}
+	\begin{figure}[ht]
+		\caption{\label{kml}\textit{Export des données en KML, visualisation en polygones sur Google Earth}}
+	\end{figure}
+\end{center}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Export GeoTiff}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{center}
+	\framebox[1\width]{
+		\includegraphics[width=15cm]{images/stl/geoTif.png}
+	}
+	\begin{figure}[ht]
+		\caption{\label{kml}\textit{Export des données en GeoTiff, visualisation QGis}}
+	\end{figure}
+\end{center}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Export ASC}
+\section{Export Shapefile}
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Utilisation du logiciel}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Interface utilisateur}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{center}
+	\framebox[1\width]{
+		\includegraphics[width=16cm]{images/utilisation/tilesSTL.png}
+	}
+	\begin{figure}[ht]
+		\caption{\label{menu}\textit{Menu principal : choix des paramètres généraux}}
+	\end{figure}
+\end{center}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{center}
+	\framebox[1\width]{
+		\includegraphics[width=16cm]{images/utilisation/s57STL.png}
+	}
+	\begin{figure}[ht]
+		\caption{\label{menu}\textit{Choix des objets S57 à représenter}}
+	\end{figure}
+\end{center}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{center}
+	\framebox[1\width]{
+		\includegraphics[width=16cm]{images/utilisation/altiBathySTL.png}
+	}
+	\begin{figure}[ht]
+		\caption{\label{menu}\textit{Choix des modèles numériques de terrain à représenter}}
+	\end{figure}
+\end{center}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{center}
+	\framebox[1\width]{
+		\includegraphics[width=16cm]{images/utilisation/exportSTL.png}
+	}
+	\begin{figure}[ht]
+		\caption{\label{menu}\textit{Choix des formats d'export}}
+	\end{figure}
+\end{center}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{center}
+	\framebox[1\width]{
+		\includegraphics[width=14cm]{images/utilisation/rade_1-300x300.png}
+	}
+	\begin{figure}[ht]
+		\caption{\label{mntAlti}\textit{Sélection d'une zone et des objets recherchés}}
+	\end{figure}
+\end{center}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{center}
+	\framebox[1\width]{
+		\includegraphics[width=14cm]{images/utilisation/rade-300x271.png}
+	}
+	\begin{figure}[ht]
+		\caption{\label{mntAlti}\textit{Sélection d'une zone et des objets recherchés : résultat en STL}}
+	\end{figure}
+\end{center}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Les publications}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Les résultats}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Les futurs travaux}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Exploration des détails de bathymétrie}
+LIDAR
+
+\section{Intégration des données Open Street Building}
+

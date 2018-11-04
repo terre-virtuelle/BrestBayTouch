@@ -1,0 +1,36 @@
+\select@language {french}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {1.1}{\ignorespaces \textit {Un extrait du panneau KANBAN du projet}}}{12}{figure.1.1}
+\contentsline {figure}{\numberline {1.2}{\ignorespaces \textit {Rade de Brest }}}{13}{figure.1.2}
+\contentsline {figure}{\numberline {1.3}{\ignorespaces \textit {MNT bathym\'etrique }}}{13}{figure.1.3}
+\contentsline {figure}{\numberline {1.4}{\ignorespaces \textit {Les mod\`eles num\'eriques de terrain altim\'etrique et bathym\'etrique issus des donn\'ees IGN et SHOM}}}{14}{figure.1.4}
+\contentsline {figure}{\numberline {1.5}{\ignorespaces \textit {Les mod\`eles num\'eriques de terrain altim\'etrique et DepthArea de la cartographie du SHOM}}}{15}{figure.1.5}
+\contentsline {figure}{\numberline {1.6}{\ignorespaces \textit {Les mod\`eles num\'eriques de terrain altim\'etrique et DepthArea de la cartographie du SHOM}}}{16}{figure.1.6}
+\contentsline {figure}{\numberline {1.7}{\ignorespaces \textit {Recherche de la bonne repr\'esentation du balisage : planche g\'en\'erale}}}{17}{figure.1.7}
+\contentsline {figure}{\numberline {1.8}{\ignorespaces \textit {Recherche de la bonne repr\'esentation du balisage}}}{18}{figure.1.8}
+\contentsline {figure}{\numberline {1.9}{\ignorespaces \textit {Recherche de la bonne repr\'esentation du balisage}}}{18}{figure.1.9}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces \textit {Repr\'esentation hypsom\'etrique du relief m\'etropolitain}}}{20}{figure.2.1}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces \textit {Space Shuttle Radar Topography Mission (SRTM)}}}{21}{figure.3.1}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces \textit {Chargement des donn\'ees dans la base BD ALTI}}}{22}{figure.3.2}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces \textit {Etendue du projet BD ALTI}}}{23}{figure.3.3}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces \textit {Chargement des donn\'ees dans la base BD BATHY}}}{24}{figure.3.4}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces \textit {Etendue du projet Homonim PBMA}}}{25}{figure.3.5}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces \textit {MNT bathym\'etrique de la fa\c cade Atlantique \`a une r\'esolution de 0.001\IeC {\textdegree }(~111m)}}}{26}{figure.3.6}
+\contentsline {figure}{\numberline {3.7}{\ignorespaces \textit {Chargement des donn\'ees dans une des bases cartographiques S57}}}{27}{figure.3.7}
+\contentsline {figure}{\numberline {3.8}{\ignorespaces \textit {Entr\'ee de new York City }}}{28}{figure.3.8}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces \textit {Export des donn\'ees en KML, visualisation sur Google Earth}}}{30}{figure.4.1}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces \textit {Export des donn\'ees en KML, visualisation en polygones sur Google Earth}}}{30}{figure.4.2}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces \textit {Export des donn\'ees en GeoTiff, visualisation QGis}}}{31}{figure.4.3}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {5.1}{\ignorespaces \textit {Menu principal : choix des param\`etres g\'en\'eraux}}}{35}{figure.5.1}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces \textit {Choix des objets S57 \`a repr\'esenter}}}{35}{figure.5.2}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces \textit {Choix des mod\`eles num\'eriques de terrain \`a repr\'esenter}}}{36}{figure.5.3}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces \textit {Choix des formats d'export}}}{37}{figure.5.4}
+\contentsline {figure}{\numberline {5.5}{\ignorespaces \textit {S\'election d'une zone et des objets recherch\'es}}}{38}{figure.5.5}
+\contentsline {figure}{\numberline {5.6}{\ignorespaces \textit {S\'election d'une zone et des objets recherch\'es : r\'esultat en STL}}}{39}{figure.5.6}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
